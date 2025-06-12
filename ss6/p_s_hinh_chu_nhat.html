@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính chu vi và diện tích hình chữ nhật</h1>
+<input id="rong" placeholder="Nhập chiều rộng hình chữ nhật"> <br>
+<input id="dai" placeholder="Nhập chiều dài hình chữ nhật"> <br>
+<button onclick="tinhtoan()">Tính chu vi và diện tích</button>
+<p id="kq1"></p>
+<p id="kq2"></p>
+<script>
+    function tinhtoan() {
+    let r = +document.getElementById("rong").value;
+    let d = +document.getElementById("dai").value;
+    let p = (r+d)*2;
+    document.getElementById("kq1").innerHTML="<b>Chu vi hình chữ nhật là: </b>"+p;
+    let s = r*d;
+    document.getElementById("kq2").innerHTML="<b>Diện tích hình chữ nhật là: </b>"+s;
+    }
+</script>
+</body>
+</html>
