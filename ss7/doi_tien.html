@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi tiền</title>
+</head>
+<body>
+<label style="margin-right: 100px;margin-left: 50px;"><b>Amount</b></label>
+<label style="margin-right: 80px;"><b>From currency</b></label>
+<label><b>To currency</b></label> <br>
+<input id="tien" style="margin-right: 80px;">
+<select id="doitien1" style="margin-right: 130px;">
+  <option>USD</option>
+  <option>VND</option>
+</select>
+<select id="doitien2" style="margin-right: 30px;">
+  <option>VND</option>
+  <option>USD</option>
+</select>
+<button onclick="doitien()" style="background-color:purple; color:white;"><b>Convert</b></button>
+<p id="result"></p>
+<script>
+  const uSangV = 26.075;
+  function doitien(){
+    let a = +document.getElementById("tien").value;
+    let tienviet = a* uSangV
+    document.getElementById("result").innerHTML = "Result : " +tienviet + " VND";
+
+   }
+</script>
+</body>
+</html>

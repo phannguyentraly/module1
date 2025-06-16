@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label><b>Amount</b></label>
+    <label><b>From currency</b></label>
+    <label><b>To currency</b></label> <br>
+    <input id="tien">
+    <select id="a">
+        <option>USD</option>
+        <option>VND</option>
+    </select>
+    <select id="b">
+        <option>VND</option>
+        <option>USD</option>
+    </select>
+    <button onclick="convert()">Convert</button><br>
+<p id="result"></p>
+<script>
+    function convert(){
+        const tigia = 26.075;
+        let tien = +document.getElementById("tien").value;
+        if (a == "USD"&& b == "VND"){
+            document.getElementById("result").innerHTML = "Result: "+(tien*tigia)+" VND";
+        };
+        if (a =="VND" && b =="USD"){
+            document.getElementById("result").innerHTML = "Result: "+(tien/tigia)+" USD";
+        };
+        if (a ==b){
+            document.getElementById("result").innerHTML = "Result: "+ tien + a;
+        };
+    }
+</script>
+</form>
+</body>
+</html>
