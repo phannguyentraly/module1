@@ -5,16 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-<form>
     <label><b>Amount</b></label>
     <label><b>From currency</b></label>
     <label><b>To currency</b></label> <br>
     <input id="tien">
-    <select id="a">
+    <select id="from">
         <option>USD</option>
         <option>VND</option>
     </select>
-    <select id="b">
+    <select id="to">
         <option>VND</option>
         <option>USD</option>
     </select>
@@ -22,19 +21,20 @@
 <p id="result"></p>
 <script>
     function convert(){
-        const tigia = 26.075;
+        const tiGia = 26.075;
         let tien = +document.getElementById("tien").value;
-        if (a == "USD"&& b == "VND"){
-            document.getElementById("result").innerHTML = "Result: "+(tien*tigia)+" VND";
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        if (from == "USD"&& to == "VND"){
+            document.getElementById("result").innerHTML = "Result: "+(tien*tiGia)+" VND";
         };
-        if (a =="VND" && b =="USD"){
-            document.getElementById("result").innerHTML = "Result: "+(tien/tigia)+" USD";
+        if (from =="VND" && to =="USD"){
+            document.getElementById("result").innerHTML = "Result: "+(tien/tiGia)+" USD";
         };
-        if (a ==b){
-            document.getElementById("result").innerHTML = "Result: "+ tien + a;
+        if (from ==to){
+            document.getElementById("result").innerHTML = "Result: "+ tien + from;
         };
     }
 </script>
-</form>
 </body>
 </html>
