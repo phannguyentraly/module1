@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let income = +prompt("Tổng nhập cá nhân/năm: ");
+    let taxfree = +prompt("Thu nhập miễn thuế/năm: ");
+    let thuNhap = income-taxfree;
+    let thue = thuNhap * 5/100;
+    alert(`Thuế phải đóng: ${thue}`);
+</script>
+</body>
+</html>

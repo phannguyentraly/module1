@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập độ (độ C)</label>
+<input id="doC"> <br>
+<button onclick="tinhDoF()">Tính độ F</button>
+<p id="result"></p>
+<script>
+  function tinhDoF() {
+    let doC = document.getElementById('doC').value;
+    let doF = doC * (9 / 5) + 32;
+    document.getElementById("result").innerHTML = `${doC} độ C tương đương ${doF} độ F`;
+  }
+</script>
+</body>
+</html>

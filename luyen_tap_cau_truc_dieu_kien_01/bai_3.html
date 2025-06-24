@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập số nguyên</label>
+<input id="number"> <br>
+<button id="check" onclick="kiemTra()">Kiểm tra</button>
+<p id="result"></p>
+<script>
+  function kiemTra() {
+    let a = +document.getElementById("number").value;
+    if (a % 1 != 0) {
+      document.getElementById("result").innerHTML = `${a} không phải số nguyên`;
+    } else if (a < 0) {
+      document.getElementById("result").innerHTML = `${a} nhỏ hơn 0`;
+    } else if (a > 0) {
+      document.getElementById("result").innerHTML = `${a} lớn hơn 0`;
+    } else {
+      document.getElementById("result").innerHTML = `${a} bằng 0`;
+    }
+  }
+</script>
+</body>
+</html>

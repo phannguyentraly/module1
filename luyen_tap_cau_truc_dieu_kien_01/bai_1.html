@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập a</label>
+<input type = "text" id="a"> <br>
+<label>Nhập b</label>
+<input id="b"> <br>
+<button onclick="kiemTra()">Kiểm tra</button>
+<p id="result"></p>
+<script>
+  function kiemTra() {
+    let a = +document.getElementById("a").value;
+    let b = +document.getElementById("b").value;
+    if (b == 0) {
+      document.getElementById("result").innerHTML = "Không thực hiện được phép chia";
+    } else if (a % b == 0) {
+      document.getElementById("result").innerHTML = `${a} chia hết cho ${b}`;
+    } else {
+      document.getElementById("result").innerHTML = `${a} không chia hết cho ${b}`;
+    }
+  }
+</script>
+</body>
+</html>

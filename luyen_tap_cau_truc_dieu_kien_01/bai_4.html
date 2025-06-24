@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập a: </label>
+<input id="a"> <br>
+<label>Nhập b: </label>
+<input id="b"><br>
+<label>Nhập c: </label>
+<input id="c"><br>
+<button id="compare" onclick="soSanh()">So sánh</button>
+<p id="result"></p>
+<script>
+  function soSanh() {
+    let a = +document.getElementById("a").value;
+    let b = +document.getElementById("b").value;
+    let c = +document.getElementById("c").value;
+    if (a > b && a > c) {
+      document.getElementById("result").innerHTML = `${a} là số lớn nhất trong 3 số`;
+    } else {
+      if (b > c) {
+        document.getElementById("result").innerHTML = `${b} là số lớn nhất trong 3 số`;
+      } else {
+        document.getElementById("result").innerHTML = `${c} là số lớn nhất trong 3 số`;
+      }
+    }
+  }
+</script>
+</body>
+</html>

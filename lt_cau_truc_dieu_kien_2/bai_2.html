@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập mét (m)</label>
+<input id="meter"> <br>
+<button onclick="tinhFeet()">Chuyển sang ft</button>
+<p id="result"></p>
+<script>
+    function tinhFeet() {
+        let meter = document.getElementById('meter').value;
+        let ft = meter * 3.2808;
+        document.getElementById("result").innerHTML = `${meter}m tương đương ${ft}ft`;
+    }
+</script>
+</body>
+</html>
