@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 2;
+    let soDau = 1;
+    let soSau = 1;
+    let tong = 2;
+    for (; count < 20; count++) {
+        let sum = soDau + soSau;
+        soDau = soSau;
+        soSau = sum;
+        tong = tong + sum;
+    }
+    document.write(`Tổng 20 số fibonacci đầu tiên là: ${tong}`);
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="start()">Bắt đầu chơi</button>
+<script>
+    function start() {
+        let range = +prompt("Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu?");
+        for (let count = 0; count < 3; count++) {
+            let num = +prompt("Bạn đoán số bao nhiêu?");
+            if (num === range) {
+                alert("Bạn đoán đúng rồi!");
+                break;
+            } else if (num > range) {
+                alert("Số lớn hơn số cần đoán");
+            } else if (num < range) {
+                alert("Số nhỏ hơn số cần đoán");
+            }
+        }
+        alert("Bạn hết lần đoán");
+    }
+</script>
+</body>
+</html>
