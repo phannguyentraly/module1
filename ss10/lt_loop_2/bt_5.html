@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let money = +prompt("Số tiền cho vay(VND): ");
+  let month = +prompt("Số tháng vay: ");
+  let lai = 4/100;
+  let tongTien=1;
+  for(let i =1;i<=month;i++){
+    tongTien= tongTien*(1+lai);
+  }
+  alert(`Tổng tiền phải trả ngân hàng sau ${month} tháng là ${tongTien}`);
+</script>
+</body>
+</html>

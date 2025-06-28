@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //hình 1
+    for(let row=1;row<=5;row++){
+        for(let col=1;col<=row;col++){
+            document.write("*");
+        }
+        document.write("<br>")
+    }
+    document.write("<br>");
+
+    //hình 2
+    for(let row=1;row<=5;row++){
+        for(let col=1;col<= 6-row;col++){
+            document.write("*");
+        }
+        document.write("<br>")
+    }
+    document.write("<br>");
+
+    // hình 3
+    for (let row = 1; row <= 5; row++) {
+        for (let space = 1; space <= 6 - row; space++) {
+            document.write("&ensp;");
+        }
+        for (let col = 1; col <= row; col++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+
+    //hình 4
+    for (let row = 1; row <= 5; row++) {
+        for (let space = 1; space <= row; space++) {
+            document.write("&ensp;");
+        }
+        for(let col=1; col<= 6-row;col++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>
