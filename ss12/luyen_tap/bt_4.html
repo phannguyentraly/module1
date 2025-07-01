@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Độ dài mảng là: ");
+    let array = new Array(n);
+    for (let i = 0; i < n; i++) {
+        array[i] = +prompt(`Số nguyên thứ ${i + 1} là: `);
+    }
+    alert(array.reverse());
+</script>
+</body>
+</html>

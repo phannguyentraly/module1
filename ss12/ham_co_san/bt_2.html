@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //BT2: nối chuỗi có '-' giữa 2 số chẵn
+    let array = new Array(8);
+    for(let i = 0; i < 8; i++) {
+        array[i]= +prompt(`Số thứ ${i+1} là: `);
+    }
+    let dau= "";
+    for( let i = 0; i < 8; i++) {
+        dau+=array[i];
+        if(array[i]%2==0&&array[i+1]%2==0){
+            dau+="-";
+        }
+    }
+    document.write(dau);
+</script>
+</body>
+</html>

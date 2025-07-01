@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Độ dài mảng: ");
+    let array = new Array(n);
+    let sum = 0;
+    let max = 0;
+    for (let i = 0; i < n; i++) {
+        array[i] = +prompt(`Số nguyên thứ ${i + 1} là: `);
+        if (array[i] > max) {
+            max = array[i];
+        }
+        sum += array[i];
+    }
+    alert(`Số nguyên lớn nhất là: ${max}`);
+    alert("Trung bình cộng các số nguyên là: " + sum / n)
+</script>
+</body>
+</html>

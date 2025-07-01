@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = new Array(10);
+    let max = 0;
+    for (let i = 0; i < 10; i++) {
+        array[i] = +prompt(`Số nguyên thứ ${i + 1} là: `);
+        // kiểm tra số có khác nhau không? thiếu nè
+        if (array[i] > max) {
+            max = array[i];
+        }
+    }
+    ;
+    for (let i = 0; i < 10; i++) {
+        if (array[i] == max) {
+            alert(`Số nguyên lớn nhất là: ${max} có chỉ số ${i}`);
+        }
+    }
+</script>
+</body>
+</html>

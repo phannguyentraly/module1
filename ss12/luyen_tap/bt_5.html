@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập độ dài mảng: ");
+    let array = new Array(n);
+    let count = 0;
+    for (let i = 0; i < n; i++) {
+        array[i] = +prompt(`Số nguyên thứ ${i + 1} là: `);
+        if (array[i] < 0) {
+            count++;
+        }
+    }
+    alert(`Có ${count} số nguyên âm trong mảng`);
+</script>
+</body>
+</html>
