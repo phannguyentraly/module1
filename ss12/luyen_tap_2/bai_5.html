@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array1 = prompt("Nhập chuỗi đầu: ");
+    let array2 = prompt("Nhập chuỗi sau: ");
+    // lỡ chuỗi sau dài hơn
+    if(array1.length != array2.length) {
+        alert("Hai chuỗi không giống nhau")
+    }else{
+        let giong = true;
+        for (let i = 0; i < array1.length; i++) {
+            if (array1[i] != array2[i]) {
+                giong = false;
+                break;
+            }
+        }
+        if(giong = true){
+            alert("Hai chuỗi giống nhau")
+        }else{
+            alert("Hai chuỗi không giống nhau")
+        }
+    }
+</script>
+</body>
+</html>

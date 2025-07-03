@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chuoi = prompt("Nhập chuỗi cần đếm: ");
+    let demTu = 1;
+    alert(chuoi.length);
+    for (let i = 0; i < chuoi.length; i++) {
+        // nếu có " " cộng 1
+        if (chuoi[i] == " ") {
+            demTu += 1;
+        }
+    }
+    alert(demTu);
+</script>
+</body>
+</html>
