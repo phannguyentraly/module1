@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let stars = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let constellation = ['Ursa Minor', 'Taurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    function find() {
+        let star = prompt("Nhập ngôi sao: ");
+        for (let i = 0; i < stars.length; i++) {
+            if (star == stars[i]) {
+                alert(`Chòm sao tương ứng là: ${constellation[i]}`);
+            }
+        }
+    }
+
+    find();
+</script>
+</body>
+</html>

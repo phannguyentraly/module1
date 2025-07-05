@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function compare() {
+        let first = +prompt("Nhập số đầu tiên");
+        let second = +prompt("Nhập số thứ hai");
+        if (first > second) {
+            alert(`${first} lớn hơn ${second}`);
+        } else if (second >= first) {
+            let sum = first + second;
+            document.write(`Tổng hai số là: ${sum}`);
+        }
+    }
+
+    compare();
+</script>
+</body>
+</html>
