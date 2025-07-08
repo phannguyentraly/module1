@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check() {
+        let array = [11, 2, 3, -5, 6, 8, 10];
+        let n = +prompt("Nhập số cần kiểm tra");
+        let check = false;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == n) {
+                check = true;
+                break;
+            }
+        }
+        if (check == true) {
+            alert(`oke`);
+        } else {
+            alert('-1');
+        }
+    }
+
+    check();
+</script>
+</body>
+</html>

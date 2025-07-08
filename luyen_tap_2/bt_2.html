@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="radius" placeholder="Nhập r"><br>
+<button onclick="area()">Tính diện tích</button>
+<br>
+<button onclick="perimeter()">Tính chu vi</button>
+<br>
+<p id="area"></p><br>
+<p id="perimeter"></p>
+<script>
+    function area() {
+        let r = +document.getElementById("radius").value;
+        let area = 3.14 * r * r;
+        document.getElementById("area").innerHTML = `Diện tích hình tròn: ${area}`;
+    }
+
+    function perimeter() {
+        let r = +document.getElementById("radius").value;
+        let perimeter = 2 * 3.14 * r;
+        document.getElementById("perimeter").innerHTML = `Chu vi hình tròn: ${perimeter}`;
+    }
+</script>
+</body>
+</html>

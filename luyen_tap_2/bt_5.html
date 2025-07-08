@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function findMax(){
+    let array = new Array(3);
+    let max = 0;
+    for(let i=0;i<3;i++){
+      array[i]= +prompt(`Nhập số nguyên thứ ${i+1}:`);
+      if(array[i]>max){
+        max=array[i];
+      }
+    }
+    alert(`Số nguyên lớn nhất là ${max}`);
+  }
+  findMax();
+</script>
+</body>
+</html>
