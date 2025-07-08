@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // tạo class
+    class temp {
+        constructor(doC) {
+            this.doC = doC;
+        }
+
+        // tính độ F
+        doF() {
+            return this.doC * 1.8 + 32;
+        }
+
+        // tính độ K
+        doK() {
+            return this.doC + 273;
+        }
+
+        // get
+        getDoF() {
+            return this.doF();
+        }
+
+        getDoK() {
+            return this.doK();
+        }
+    }
+
+    // tạo đối tượng
+    let mytemp = new temp(25);
+    alert(`${mytemp.doF()} độ F`);
+    alert(`${mytemp.doK()} độ K`);
+</script>
+</body>
+</html>

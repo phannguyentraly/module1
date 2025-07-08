@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // tạo class
+    class rectangle {
+        width;
+        length;
+
+        area() {
+            return this.width * this.length;
+        }
+
+        perimeter() {
+            return (this.width + this.length) / 2;
+        }
+
+        constructor(width, length) {
+            this.width = width;
+            this.length = length;
+        }
+
+        getArea() {
+            return this.area();
+        }
+
+        getPerimeter() {
+            return this.perimeter();
+        }
+
+        setWidth(width) {
+            this.width = width;
+        }
+
+        setLength(length) {
+            this.length = length;
+        }
+    }
+
+    // tạo object
+    let myRectangle = new rectangle(0, 0);
+    // gán giá trị
+    myRectangle.setWidth(5);
+    myRectangle.setLength(10);
+    // thông báo kết quả
+    alert(`Diện tích: ${myRectangle.getArea()}`);
+    alert(`Chu vi: ${myRectangle.getPerimeter()}`);
+
+</script>
+</body>
+</html>
