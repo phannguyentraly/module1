@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // nhập mảng số
+    let n = +prompt("Nhập độ dài mảng");
+    let array1 = new Array(n);
+    for (let i = 0; i < array1.length; i++) {
+        array1[i] = +prompt("Nhập số");
+    }
+    alert(array1);
+    let check = true;
+    for (let i = 0; i < n; i++) {
+        if (array1[i] !== array1[n - 1 - i]) {
+            check = false;
+        }
+    }
+    if (check == false) {
+        alert("NO");
+    } else {
+        alert("OK")
+    }
+
+</script>
+</body>
+</html>

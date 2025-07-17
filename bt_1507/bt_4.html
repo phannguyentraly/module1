@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // function find(x){
+  //   if(isNaN(x)===true){
+  //     alert("Không phải là phân số");
+  //   }else{
+  //     let check=false;
+  //     for(let i=10;i<x.length;i++){
+  //       if(x[i]=="/"){
+  //         check= true;
+  //         break;
+  //       }
+  //     }
+  //     if(check==false){
+  //       alert("Không phải là phân số");
+  //     }else{
+  //       alert("Là phân số");
+  //     }
+  //   }
+  // }
+  // find([3/4])
+
+
+  // cách suy nghĩ (hoặc không)
+  // truyền số vào
+  // kiểm tra phải số không
+  // nếu có
+    // kiểm tra có / không
+      // nếu có
+        // đưa về tối giản nếu chưa
+      // nếu không -> false
+  // nếu không -> false
+
+  function find(x){
+    if(isNaN(x)===true){
+      alert("Không phải phân số");
+    }else{
+      if(x.includes('/')===true){
+        alert("Là phân số");
+      }else{
+        alert("Không phải phân số");
+      }
+    }
+  }
+  find(2/3);
+</script>
+</body>
+</html>
