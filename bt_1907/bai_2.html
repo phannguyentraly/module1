@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = 'objectOriented';
+    shorten(str1);
+
+    // tạo hàm
+    function shorten(str) {
+        let array = str.split(" ");
+        if (array.length < 2) {
+            alert("Chuỗi chỉ có 1 từ duy nhất nên không cần viết tắt");
+        } else {
+            // tách chữ
+            let array1 = [];
+            for (let i = 0; i < array.length; i++) {
+                for (let j = 0; j < array[i].length; j++) {
+                    array[i][j] = array[i].split("", 1);
+                }
+                array1.push(array[i][0].toUpperCase());
+            }
+            alert(array1.join(""));
+        }
+    }
+</script>
+</body>
+</html>
