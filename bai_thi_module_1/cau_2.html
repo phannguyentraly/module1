@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkChar(str) {
+        let array = str.split("");
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            // if (typeof (array[i] / 1) !== "number") {
+            //     continue;
+            // } else {
+            //     if (array[i] === array[i].toUpperCase()) {
+            //         count++;
+            //     }
+            // }
+            if (array[i] === array[i].toUpperCase()) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            return ("The Strings is not contain upper char");
+        } else {
+            return count;
+        }
+    }
+
+    let str1 = "abcdEF";
+    alert(checkChar(str1));
+</script>
+</body>
+</html>

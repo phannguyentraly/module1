@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Danh bạ điện thoại</h2>
+<input id="id" placeholder="Nhập mã điện thoại">
+<input id="name" placeholder="Nhập tên">
+<input id="brand" placeholder="Nhập hãng sản xuất">
+<input id="price" type="number" placeholder="Nhập giá">
+<button onclick="addNew()"><b>Thêm 1 điện thoại</b></button>
+<br>
+<p id="display"></p>
+<script>
+    class Phonenumber {
+        constructor(id, name, brand, price) {
+            this.id = id;
+            this.name = name;
+            this.brand = brand;
+            this.price = price;
+        }
+
+        setID(id) {
+            this.id = id;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setBrand(brand) {
+            this.brand = brand;
+        }
+
+        setPrice(price) {
+            this.price = price;
+        }
+
+        getID() {
+            return this.id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getBrand() {
+            return this.brand;
+        }
+
+        getPrice() {
+            return this.price;
+        }
+    }
+
+    let phoneNum1 = new Phonenumber(123, "Nguyễn Văn A", "Samsung", 200);
+    let phoneNum2 = new Phonenumber(124, "Nguyễn Văn B", "Iphone", 350);
+    let phoneNum3 = new Phonenumber(125, "Nguyễn Văn C", "Xiaomi", 160);
+    let phoneList = [phoneNum1, phoneNum2, phoneNum3];
+    // còn sắp xếp theo thứ tự alphabet
+
+    function addNew() {
+        let newPhone = new Phonenumber(0, "", "", 0);
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let brand = document.getElementById("brand").value;
+        let price = document.getElementById("price").value;
+        newPhone.setID(id);
+        newPhone.setName(name);
+        newPhone.setBrand(brand);
+        newPhone.setPrice(price);
+        phoneList.push(newPhone);
+        document.getElementById("id").value = "";
+        document.getElementById("name").value = "";
+        document.getElementById("brand").value = "";
+        document.getElementById("price").value = "";
+        showList(phoneList);
+    }
+
+    function showList(list) {
+        let tableString = `<table border="1" style="border-collapse: collapse;">
+                                <tr>
+                                    <th>No</th>
+                                    <th>Mã điện thoại</th>
+                                    <th>Tên</th>
+                                    <th>Hãng sản xuất</th>
+                                    <th>Giá</th>
+                                </tr>`
+        for (let i = 0; i < list.length; i++) {
+                tableString += `<tr align="center">
+                                  <td>${i + 1}</td>
+                                  <td>${list[i].getID()}</td>
+                                  <td>${list[i].getName()}</td>
+                                  <td>${list[i].getBrand()}</td>
+                                  <td>${list[i].getPrice()}</td>
+                                </tr>`
+        }
+        tableString += `</table>`;
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+    showList(phoneList);
+</script>
+</body>
+</html>

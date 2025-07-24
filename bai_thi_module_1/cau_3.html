@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findPrime(arr) {
+        let prime = [];
+        for (let i = 0; i < arr.length; i++) {
+            let count = 0;
+            for (let j = 2; j <= arr[i]; j++) {
+                if (arr[i] % j == 0) {
+                    count++;
+                }
+            }
+            if (count === 1) {
+                prime.push(arr[i]);
+            }
+        }
+        return prime.sort((a, b) => a - b);
+    }
+
+    let array = [1, 5, 6, 23, 8, 47, 10, 3];
+    alert(findPrime(array));
+</script>
+</body>
+</html>
